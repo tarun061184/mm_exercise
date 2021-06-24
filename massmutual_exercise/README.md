@@ -9,4 +9,10 @@
 5. Need to verify the total balance matches the sum of the values
 * Create a mockup of what the results would look like assuming all steps passed 
 
-#### NOTE: Objective 3 and 5 are same, so validated at the end only (overall 4 scenarios).
+### Observations:
+* Objective 3 and 5 are same, so validated at the end only (overall 4 scenarios).
+* Total Balance value provided is incorrect, so total balance check scenario fails 
+* Noticed that in element ids sequence number 3 was skipped. Assuming it is a typo, I created my mock page with correct element ids.
+
+#### Note:
+I am including result html in git repo for review.
