@@ -1,0 +1,1 @@
+mock: BASE_URL='https://exercise1problem1.netlify.app/' --color --publish-quiet --format html --out 'results/chrome_results.html'
