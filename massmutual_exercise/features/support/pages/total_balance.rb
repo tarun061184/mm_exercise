@@ -34,7 +34,7 @@ class TotalBalance
     if lbl_ttl_val.present?
       puts "Total Balance: #{lbl_ttl_val} is present on screen."
     else
-      puts "Total Balance missing"
+      puts "Total Balance is missing."
     end
   end
 
@@ -94,9 +94,9 @@ class TotalBalance
       sum += value.delete('^0-9','^.').to_f
     end
     if sum == lbl_ttl_val.delete('^0-9','^.').to_f
-      puts "Total Balance: #{lbl_ttl_val} is correct"
+      puts "Total Balance: #{lbl_ttl_val} is correct."
     else
-      raise "Total Balance: #{lbl_ttl_val} is incorrect. Correct Total Balance is: #{sum}"
+      raise "Total Balance: #{lbl_ttl_val} is incorrect. Correct Total Balance is: #{sum}."
     end
   end
 
