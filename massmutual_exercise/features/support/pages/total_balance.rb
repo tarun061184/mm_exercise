@@ -79,7 +79,7 @@ class TotalBalance
     fail = []
     get_values_text.each_with_index do |value, index|
       if is_currency_format?(value)
-        puts "I verified that Value #{index + 1}: #{value} is in US currency format."
+        puts "Value #{index + 1}: #{value} is in US currency format."
       else
         fail << value
       end
