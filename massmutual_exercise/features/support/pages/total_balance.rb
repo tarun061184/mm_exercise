@@ -64,7 +64,7 @@ class TotalBalance
       if is_positive_value?(value) > 0
         puts "I verified that Value #{index + 1}: #{value} is greater than 0."
       else
-        fail << value
+        fail << "Value #{index + 1}"
       end
     end
     raise "Following values are not greater than 0: #{fail.join(', ')}" unless fail.empty?
@@ -81,7 +81,7 @@ class TotalBalance
       if is_currency_format?(value)
         puts "Value #{index + 1}: #{value} is in US currency format."
       else
-        fail << value
+        fail << "Value #{index + 1}"
       end
     end
     raise "Following values are not in currency format: #{fail.join(', ')}" unless fail.empty?
