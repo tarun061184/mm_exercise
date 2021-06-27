@@ -59,15 +59,15 @@ class TotalBalance
 
   def verify_positive_values
     puts "Values greater than 0 check:"
-    fail = []
+    positive_fail = []
     get_values_text.each_with_index do |value, index|
       if is_positive_value?(value) > 0
         puts "I verified that Value #{index + 1}: #{value} is greater than 0."
       else
-        fail << "Value #{index + 1}"
+        positive_fail << "Value #{index + 1}"
       end
     end
-    raise "Following values are not greater than 0: #{fail.join(', ')}" unless fail.empty?
+    raise "Following values are not greater than 0: #{positive_fail.join(', ')}" unless positive_fail.empty?
   end
 
   def is_currency_format?(value)
@@ -76,15 +76,15 @@ class TotalBalance
 
   def verify_all_values_currencies
     puts "Validation check for Currency format:"
-    fail = []
+    currency_fail = []
     get_values_text.each_with_index do |value, index|
       if is_currency_format?(value)
         puts "Value #{index + 1}: #{value} is in US currency format."
       else
-        fail << "Value #{index + 1}"
+        currency_fail << "Value #{index + 1}"
       end
     end
-    raise "Following values are not in currency format: #{fail.join(', ')}" unless fail.empty?
+    raise "Following values are not in currency format: #{currency_fail.join(', ')}" unless currency_fail.empty?
   end
 
   def verify_total_balance_amount
